@@ -1,0 +1,84 @@
+/** Base Colors */
+$darkBlue: hsl(209, 23%, 22%);
+$veryDarkBlue: hsl(207, 26%, 17%);
+$darkGrey: hsl(0, 0%, 52%);
+$veryLightGrey: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$light-bgd: #fafafa;
+$black: black;
+
+/** Breakpoints */
+$mobile-width: 375px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$large-desktop-width: 1440px;
+
+/** Sizes */
+/** Button */
+$button-large-width: 135px;
+$button-large-height: 41px;
+$button-large-font-size: 16px;
+$button-large-icon-margin-left: 15px;
+$button-large-border-radius: 7px;
+$button-medium-minimum-width: 100px;
+$button-medium-height: 30px;
+$button-medium-border-radius: 3px;
+$button-medium-font-size: 14px;
+$button-medium-icon-margin-left: 10px;
+
+/** Card */
+$card-container-width: 265px;
+$card-container-height: 335px;
+$card-container-border-radius: 4px;
+$card-container-border-radius-top: 4px 4px 0px 0px;
+$card-container-border-radius-bottom: 0px 0px 4px 4px;
+
+/** Input */
+$input-height-desktop: 50px;
+$input-border-radius: 4px;
+$input-container-padding-left: 33px;
+
+/** Search Input */
+$search-input-width-desktop: 485px;
+$search-input-padding-left: 25px;
+
+/** Options Input */
+$options-input-width: 200px;
+$divider-height: 5px;
+
+/** Box shadow */
+$box-shadow-large: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
+$box-shadow-medium: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
+$box-shadow-bottom: 0px 1px 4px 1px rgba(0, 0, 0, 0.1);
+
+/** Navigation */
+$navigation-height: 80px;
+$navigation-padding-desktop: 80px;
+$navigation-padding-mobile: 15px;
+$title-navigation-font-size-desktop: 21px;
+$secondary-navigation-font-size-desktop: 17px;
+$title-navigation-font-size-mobile: 17px;
+$secondary-navigation-font-size-mobile: 14px;
+$secondary-navigation-minimum-width: 130px;
+
+/** Pages */
+$country-details-padding-larger: 80px;
+$country-details-padding-mobile: 15px;
+$details-image-width-desktop: 560px;
+$min-page-height: 2500px;
+$home-controls-margin-top: 40px;
+$country-details-height: 400px;
+$country-details-padding-top: 50px;
+$country-details-padding-bottom: 30px;
+$card-container-margin: 20px;
+$card-container-margin-small: 15px;
+$card-container-min-width: 265px;
+$card-description-container-height: 175px;
+$card-container-padding: 25px;
+$card-title-font-size: 18px;
+$card-image-container: 160px;
+$card-title-margin-top: 30px;
+$card-title-margin-bottom: 25px;
+$card-line-font-size: 13px;
+$card-line-margin-bottom: 5px;
+$country-button-link-margin: 10px;

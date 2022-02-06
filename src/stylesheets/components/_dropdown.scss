@@ -1,0 +1,72 @@
+.dropdown-container {
+    width: $options-input-width;
+    height: $input-height-desktop;
+    margin: 10px;
+    font-family: Nunito Sans Light;
+    font-size: 13px;
+    // box-sizing: border-box;
+    position: relative;
+    left: -15px;
+
+    @include fromTablet {
+        left: -33px;
+    }
+
+    .dropdown-selected {
+        padding-left: $input-container-padding-left;
+        @include fullWidthHeight();
+        @include displayItems(flex, center, space-between, row);
+        box-shadow: $box-shadow-medium;
+        border-radius: $input-border-radius;
+        padding-right: 30px;
+        box-sizing: border-box;
+        /** this is where we implement themes*/
+        &.dark {
+            background: $darkBlue;
+            color: $white;
+        }
+    }
+
+    .divider {
+        height: $divider-height;
+        width: $options-input-width;
+        padding-left: $input-container-padding-left;
+        box-sizing: border-box;
+    }
+
+    .dropdown-options {
+        padding-left: $input-container-padding-left;
+        padding-top: $input-container-padding-left/2;
+        padding-bottom: $input-container-padding-left/2;
+        box-shadow: $box-shadow-medium;
+        border-radius: $input-border-radius;
+        width: 100%;
+        font-size: 13px;
+        position: absolute;
+        box-sizing: border-box;
+        top: $input-height-desktop + $divider-height;
+        left: 0px;
+        background: $white;
+        /** this is where we implement themes*/
+        &.dark {
+            background: $darkBlue;
+            color: $white;
+        }
+
+        .dropdown-single-option {
+            font-size: 12px;
+            padding-top: 3px;
+            cursor: pointer;
+            &:hover {
+                font-weight: bold;
+            }
+        }
+        .dropdown-single-option-right {
+            font-size: 12px;
+            padding-top: 3px;
+            @include displayItems(flex, center, flex-end, row);
+            padding-right: $input-container-padding-left;
+            cursor: pointer;
+        }
+    }
+}

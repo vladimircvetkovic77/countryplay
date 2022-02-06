@@ -1,0 +1,107 @@
+.country-details-container {
+    padding: $country-details-padding-mobile;
+    @include displayItems(flex, flex-start, flex-start, column);
+    background: $light-bgd;
+    min-height: $min-page-height;
+
+    &.dark {
+        @include darkTheme();
+        background: $veryDarkBlue;
+    }
+
+    @include fromTablet {
+        padding: $country-details-padding-larger;
+    }
+
+    @include fromDesktop {
+    }
+
+    .country-details-content {
+        @include displayItems(flex, flex-start, flex-start, column);
+        margin-top: $country-details-padding-larger;
+
+        @include fromLargeDesktop {
+            @include displayItems(flex, flex-start, flex-start, row);
+        }
+
+        .country-details-flag {
+            @include displayItems(flex, center, center, row);
+            overflow: hidden;
+            img {
+                object-fit: cover;
+                width: 350px;
+                height: 250px;
+
+                @include fromTablet {
+                    width: 640px;
+                    height: 400px;
+                }
+            }
+        }
+        .country-details-numbers {
+            width: 90%;
+            height: $country-details-height;
+            padding-top: $country-details-padding-top;
+            padding-bottom: $country-details-padding-bottom;
+            box-sizing: border-box;
+
+            @include fromTablet {
+                width: 600px;
+            }
+            @include fromLargeDesktop {
+                width: 690px;
+                margin-left: 145px;
+            }
+
+            .country-details-numbers-title {
+                font-family: Nunito Sans ExtraBold;
+                font-size: 25px;
+            }
+            .country-details-numbers-details {
+                font-family: Nunito Sans Light;
+                @include displayItems(flex, flex-start, flex-start, row);
+                flex-wrap: wrap;
+                font-size: 15px;
+                margin-top: 40px;
+            }
+            .country-details-numbers-details-item {
+                @include displayItems(flex, flex-start, flex-start, row);
+                margin-bottom: 8px;
+                width: 340px;
+                max-width: 80%;
+
+                .country-property {
+                    font-family: Nunito Sans SemiBold;
+                }
+                &.long {
+                    width: 100%;
+                }
+                &.large-margin {
+                    margin-top: 10px;
+                }
+
+                .bordering-countries-container {
+                    @include displayItems(flex, flex-start, flex-start, row);
+                    flex-wrap: wrap;
+                    max-width: 80%;
+                    padding: none;
+                    margin-top: 0px;
+                }
+
+                &.map-holder {
+                    @include displayItems(flex, flex-start, flex-start, column);
+                }
+                .map {
+                    width: 100%;
+                    height: 400px;
+                    margin-top: 20px;
+                    @include displayItems(flex, center, center, column);
+
+                    @include fromDesktop {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}

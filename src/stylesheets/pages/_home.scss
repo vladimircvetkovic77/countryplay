@@ -1,0 +1,37 @@
+.home-container {
+    @include displayItems(flex, center, flex-start, column);
+    min-height: $min-page-height;
+
+    @include fromTablet {
+        padding-left: $navigation-padding-desktop;
+        padding-right: $navigation-padding-desktop;
+    }
+
+    &.dark {
+        @include darkTheme();
+        background: $veryDarkBlue;
+    }
+
+    .home-controls-container {
+        margin-top: $home-controls-margin-top;
+        @include displayItems(flex, center, flex-start, column);
+        width: 100%;
+
+        @include fromTablet {
+            @include displayItems(flex, center, space-between, row);
+        }
+    }
+
+    .countries-cards-container {
+        @include displayItems(flex, center, center, row);
+        width: 100%;
+        flex-wrap: wrap;
+        padding-top: $home-controls-margin-top;
+        padding-bottom: $navigation-padding-desktop;
+
+        @include fromTablet {
+            @include displayItems(flex, center, space-between, row);
+            width: 100%;
+        }
+    }
+}

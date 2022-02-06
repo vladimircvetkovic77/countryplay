@@ -1,0 +1,6 @@
+{
+    "countriesBaseURL": "https://restcountries.com/v3.1",
+    "allCountriesEndpoint": "/all",
+    "singleCountryEndpoint": "/alpha/",
+    "googleMapAPIKey": "AIzaSyCvO9QuMhdXmzWyAYLLXxojpLUi2tUkVqA"
+}

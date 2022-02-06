@@ -1,0 +1,51 @@
+.navigation-container {
+    width: 100%;
+    height: $navigation-height;
+    @include displayItems(flex, center, space-between, row);
+    box-shadow: $box-shadow-bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $white;
+    padding-left: $navigation-padding-mobile;
+    padding-right: $navigation-padding-mobile;
+    box-sizing: border-box;
+
+    &.dark {
+        @include darkTheme();
+    }
+
+    @include fromTablet {
+        padding-left: $navigation-padding-desktop;
+        padding-right: $navigation-padding-desktop;
+    }
+
+    .navigation-title {
+        font-family: Nunito Sans ExtraBold;
+        font-size: $title-navigation-font-size-mobile;
+        @include fromTablet {
+            font-size: $title-navigation-font-size-desktop;
+        }
+    }
+    .navigation-theme-switcher {
+        font-family: Nunito Sans SemiBold;
+        font-size: $secondary-navigation-font-size-mobile;
+        @include displayItems(flex, center, flex-start, row);
+        min-width: $secondary-navigation-minimum-width;
+        cursor: pointer;
+        @include fromTablet {
+            font-size: $secondary-navigation-font-size-desktop;
+        }
+
+        &.dark {
+            @include darkTheme();
+        }
+        .navigation-mode {
+            margin-left: 10px;
+        }
+    }
+
+    &.dark {
+        @include darkTheme();
+    }
+}

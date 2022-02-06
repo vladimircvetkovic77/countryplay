@@ -1,0 +1,10 @@
+.country-button-link-container {
+    margin-left: $country-button-link-margin;
+    margin-bottom: $country-button-link-margin;
+    @include displayItems(flex, center, flex-start, row);
+
+    &.dark {
+        @include darkTheme();
+        background: $veryDarkBlue;
+    }
+}

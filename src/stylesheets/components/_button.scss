@@ -1,0 +1,38 @@
+.btn {
+    font-family: Nunito Sans Light;
+    @include displayItems(flex, center, center, row);
+    border: none;
+    background: $white;
+    cursor: pointer;
+
+    &.dark {
+        @include darkTheme();
+    }
+}
+
+/** BUTTON VARIATIONS */
+/** LARGE BUTTON */
+.button-large {
+    width: $button-large-width;
+    height: $button-large-height;
+    border-radius: $button-large-border-radius;
+    font-size: $button-large-font-size;
+    box-shadow: $box-shadow-large;
+
+    .with-icon {
+        margin-left: $button-large-icon-margin-left;
+    }
+}
+
+/** MEDIUM BUTTON */
+.button-medium {
+    min-width: $button-medium-minimum-width;
+    height: $button-medium-height;
+    border-radius: $button-medium-border-radius;
+    font-size: $button-medium-font-size;
+    box-shadow: $box-shadow-medium;
+
+    .with-icon {
+        margin-left: $button-medium-icon-margin-left;
+    }
+}

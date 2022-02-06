@@ -1,0 +1,34 @@
+.search-input-container {
+    height: $input-height-desktop;
+    @include displayItems(flex, center, flex-start, row);
+    box-shadow: $box-shadow-large;
+    padding-left: $input-container-padding-left;
+    border-radius: $input-border-radius;
+    font-family: Nunito Sans Light;
+    width: 200px;
+
+    &.dark {
+        @include darkTheme();
+    }
+
+    @include fromTablet {
+        max-width: 50%;
+    }
+    @include fromTablet {
+        width: $search-input-width-desktop;
+    }
+
+    input {
+        border: none;
+        padding-left: $input-container-padding-left;
+        &:focus {
+            outline: none;
+        }
+        &.dark {
+            @include darkTheme();
+            &::placeholder {
+                color: $white;
+            }
+        }
+    }
+}
