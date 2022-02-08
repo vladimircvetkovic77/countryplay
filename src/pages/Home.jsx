@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { loadCountries } from '../store/countries.js';
 import AppCard from '../components/AppCard';
 import http from '../services/httpService';
+import config from '../config/config.json';
 
 class Home extends Component {
 
@@ -36,10 +37,10 @@ class Home extends Component {
         if(!searchText) return this.setState({ nameSearchResult: [] });
         if(this.timeout) clearTimeout(this.timeout);
         this.timeout = setTimeout(() => {
-            http.get(`https://restcountries.com/v3.1/name/${searchText}`)
+            http.get(`${config.countriesBaseURL}${config.countryNameEndpoint}${searchText}`)
             .then(response => {this.setState({nameSearchResult: response.data})})
             .catch(error => this.setState({nameSearchResult: []}));
-      }, 500);
+        }, 500);
     }
 
   render() {
@@ -57,7 +58,7 @@ class Home extends Component {
             </div>
             {countriesToDisplay.length === 0 && <div className="home-loading">Loading...</div>}
             <div className="countries-cards-container">
-                {countriesToDisplay.length > 0 && countriesToDisplay.map((country) => <AppCard country={country} go={country.cca3.toLowerCase()} />)}
+                {countriesToDisplay.length > 0 && countriesToDisplay.map((country, index) => <AppCard key={index} country={country} go={country.cca3.toLowerCase()} />)}
             </div>
         </div>
     );

@@ -3,13 +3,14 @@
     height: $navigation-height;
     @include displayItems(flex, center, space-between, row);
     box-shadow: $box-shadow-bottom;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background: $white;
     padding-left: $navigation-padding-mobile;
     padding-right: $navigation-padding-mobile;
     box-sizing: border-box;
+    z-index: 1000;
 
     &.dark {
         @include darkTheme();
@@ -23,6 +24,7 @@
     .navigation-title {
         font-family: Nunito Sans ExtraBold;
         font-size: $title-navigation-font-size-mobile;
+        margin-left: $navigation-title-margin;
         @include fromTablet {
             font-size: $title-navigation-font-size-desktop;
         }

@@ -14,7 +14,7 @@
 
     .home-controls-container {
         margin-top: $home-controls-margin-top;
-        @include displayItems(flex, center, flex-start, column);
+        @include displayItems(flex, flex-start, flex-start, column);
         width: 100%;
 
         @include fromTablet {

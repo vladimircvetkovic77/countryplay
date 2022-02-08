@@ -18,7 +18,6 @@ function AppCountryLinkButton({ countryCode, theme, action }) {
                 setCountry(response.data[0]);
                 setIsLoading(false)
             })
-            .then(() => console.log(country))
             .catch(error => console.log(error));
         return () => {
             setIsLoading(false);

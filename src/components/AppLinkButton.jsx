@@ -18,7 +18,6 @@ export const AppLinkButton = ({ buttonClass, text, icon, type, go, action }) => 
         <Link onClick={() => action(go)} to={go}  style={{textDecoration: "none", marginLeft: '10px'}}>
             <button className={buttonClass.join(' ')}>
                 {icon && <FontAwesomeIcon icon={selectIcon(type)} />}
-                {console.log('GO',go)}
                 <span className={icon ? 'with-icon' : ''}>{text}</span>
             </button>
         </Link>

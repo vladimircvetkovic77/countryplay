@@ -5,7 +5,10 @@
     padding-left: $input-container-padding-left;
     border-radius: $input-border-radius;
     font-family: Nunito Sans Light;
-    width: 200px;
+    width: $search-input-width-mobile;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 
     &.dark {
         @include darkTheme();
@@ -13,9 +16,10 @@
 
     @include fromTablet {
         max-width: 50%;
-    }
-    @include fromTablet {
+        margin-left: $search-input-margin;
+        margin-bottom: 0px;
         width: $search-input-width-desktop;
+        margin-top: 0px;
     }
 
     input {

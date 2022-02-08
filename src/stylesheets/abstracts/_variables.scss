@@ -41,10 +41,19 @@ $input-container-padding-left: 33px;
 /** Search Input */
 $search-input-width-desktop: 485px;
 $search-input-padding-left: 25px;
+$search-input-width-mobile: 200px;
+$search-input-margin: 15px;
 
 /** Options Input */
 $options-input-width: 200px;
 $divider-height: 5px;
+$dropdown-font-size: 13px;
+$dropdown-option-font-size: 12px;
+$dropdown-margin: 15px;
+$dropdown-displacement-mobile: -10px;
+$dropdown-displacement-fromtablet: 0px;
+$options-padding-right: 30px;
+$options-small-padding: 3px;
 
 /** Box shadow */
 $box-shadow-large: 0px 0px 3px 3px rgba(0, 0, 0, 0.1);
@@ -60,13 +69,16 @@ $secondary-navigation-font-size-desktop: 17px;
 $title-navigation-font-size-mobile: 17px;
 $secondary-navigation-font-size-mobile: 14px;
 $secondary-navigation-minimum-width: 130px;
+$navigation-title-margin: 15px;
 
 /** Pages */
+/** Home */
+$home-controls-margin-top: 10px;
+$min-page-height: 2500px;
+/** Country details */
 $country-details-padding-larger: 80px;
 $country-details-padding-mobile: 15px;
 $details-image-width-desktop: 560px;
-$min-page-height: 2500px;
-$home-controls-margin-top: 40px;
 $country-details-height: 400px;
 $country-details-padding-top: 50px;
 $country-details-padding-bottom: 30px;
@@ -82,3 +94,6 @@ $card-title-margin-bottom: 25px;
 $card-line-font-size: 13px;
 $card-line-margin-bottom: 5px;
 $country-button-link-margin: 10px;
+$country-detail-flag-width-mobile: 350px;
+$country-detail-flag-width-desktop: 640px;
+$map-height: 400px;

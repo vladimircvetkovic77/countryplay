@@ -1,15 +1,15 @@
 .dropdown-container {
     width: $options-input-width;
     height: $input-height-desktop;
-    margin: 10px;
     font-family: Nunito Sans Light;
-    font-size: 13px;
-    // box-sizing: border-box;
+    font-size: $dropdown-font-size;
+    margin: $dropdown-margin;
+    margin-left: 35px;
+    left: $dropdown-displacement-mobile;
     position: relative;
-    left: -15px;
 
     @include fromTablet {
-        left: -33px;
+        left: $dropdown-displacement-fromtablet;
     }
 
     .dropdown-selected {
@@ -18,7 +18,7 @@
         @include displayItems(flex, center, space-between, row);
         box-shadow: $box-shadow-medium;
         border-radius: $input-border-radius;
-        padding-right: 30px;
+        padding-right: $options-padding-right;
         box-sizing: border-box;
         /** this is where we implement themes*/
         &.dark {
@@ -41,11 +41,11 @@
         box-shadow: $box-shadow-medium;
         border-radius: $input-border-radius;
         width: 100%;
-        font-size: 13px;
+        font-size: $dropdown-font-size;
         position: absolute;
         box-sizing: border-box;
         top: $input-height-desktop + $divider-height;
-        left: 0px;
+        left: $dropdown-displacement-fromtablet;
         background: $white;
         /** this is where we implement themes*/
         &.dark {
@@ -54,16 +54,16 @@
         }
 
         .dropdown-single-option {
-            font-size: 12px;
-            padding-top: 3px;
+            font-size: $dropdown-option-font-size;
+            padding-top: $options-small-padding;
             cursor: pointer;
             &:hover {
                 font-weight: bold;
             }
         }
         .dropdown-single-option-right {
-            font-size: 12px;
-            padding-top: 3px;
+            font-size: $dropdown-option-font-size;
+            padding-top: $options-small-padding;
             @include displayItems(flex, center, flex-end, row);
             padding-right: $input-container-padding-left;
             cursor: pointer;

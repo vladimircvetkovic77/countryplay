@@ -2,5 +2,7 @@
     "countriesBaseURL": "https://restcountries.com/v3.1",
     "allCountriesEndpoint": "/all",
     "singleCountryEndpoint": "/alpha/",
-    "googleMapAPIKey": "AIzaSyCvO9QuMhdXmzWyAYLLXxojpLUi2tUkVqA"
+    "countryNameEndpoint": "/name/",
+    "googleMapAPIKey": "AIzaSyCvO9QuMhdXmzWyAYLLXxojpLUi2tUkVqA",
+    "googleMapURL": "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyCvO9QuMhdXmzWyAYLLXxojpLUi2tUkVqA"
 }

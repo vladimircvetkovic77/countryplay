@@ -23,11 +23,9 @@ function CountryDetails({ theme  }) {
         setIsLoading(true);
         http.get(`${countriesBaseURL}${singleCountryEndpoint}${location}`)
             .then(response =>  {
-                console.log(response.data)
                 setCountry(response.data[0]);
                 setIsLoading(false)
             })
-            .then(() => console.log(country))
             .catch(error => console.log(error));
         return () => {
             // cleanup;
@@ -43,13 +41,11 @@ function CountryDetails({ theme  }) {
     }
 
     const defineLocation = (newLocation) => {
-        console.log('NL', newLocation)
         setLocation(newLocation);
     }
 
     return (
             <div className={`country-details-container ${theme}`}>
-                {console.log(country)}
                 <AppLinkButton buttonClass={buttonClass} icon={true} type='back' text='Back' go="/" action={defineLocation} />
                 <div className="country-details-content">
                     {!isLoading && <div className="country-details-flag"><img src={country.flags.svg} alt="flag" /></div>}
@@ -94,7 +90,7 @@ function CountryDetails({ theme  }) {
                                     {isMapVisible && (
                                             <div className="map">
                                                 <WrappedMap
-                                                    googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyCvO9QuMhdXmzWyAYLLXxojpLUi2tUkVqA"
+                                                    googleMapURL={`${config.googleMapURL}`}
                                                     loadingElement={<div style={{ height: `100%` }} />}
                                                     containerElement={<div style={{width: `100%`, height: `400px` }} />}
                                                     mapElement={<div style={{ height: `100%` }} />}
@@ -106,7 +102,6 @@ function CountryDetails({ theme  }) {
                                 </div>
                                 <div className="country-details-numbers-details-item long large-margin">
                                     <div className="country-property">Border Countries: &nbsp;</div>
-                                    {console.log(country.borders)}
                                     <div className="bordering-countries-container">
                                         {country.borders && country.borders.map((border, index) => {
                                             return (<AppCountryLinkButton action={defineLocation} key={border} countryCode={border} />)

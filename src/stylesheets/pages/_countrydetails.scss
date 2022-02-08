@@ -29,11 +29,11 @@
             overflow: hidden;
             img {
                 object-fit: cover;
-                width: 350px;
+                width: $country-detail-flag-width-mobile;
                 height: 250px;
 
                 @include fromTablet {
-                    width: 640px;
+                    width: $country-detail-flag-width-desktop;
                     height: 400px;
                 }
             }
@@ -93,7 +93,7 @@
                 }
                 .map {
                     width: 100%;
-                    height: 400px;
+                    height: $map-height;
                     margin-top: 20px;
                     @include displayItems(flex, center, center, column);
 
