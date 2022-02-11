@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import AppSearchInput from '../components/AppSearchInput';
 import AppDropdown from '../components/AppDropdown';
-import { connect } from 'react-redux';
-import { loadCountries } from '../store/countries.js';
 import AppCard from '../components/AppCard';
 import http from '../services/httpService';
 import config from '../config/config.json';
+import { loadCountries } from '../store/countries.js';
+import { connect } from 'react-redux';
 
 class Home extends Component {
 
